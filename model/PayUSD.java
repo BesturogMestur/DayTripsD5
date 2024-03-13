@@ -1,4 +1,4 @@
-public class PayGBT extends Pay{
+public class PayUSD extends Pay{
     private double value;
 
     //Constructor will be made at a later dayed
