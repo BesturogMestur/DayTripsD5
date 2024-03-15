@@ -1,4 +1,4 @@
-Create TABLE User(
+Create TABLE Users(
 	ID int PRIMARY KEY,
 	FName VARCHAR(255),
 	LName VARCHAR(255),
@@ -8,19 +8,19 @@ Create TABLE User(
 
 Create TABLE Trip(
 	trip VARCHAR(255),
-	day date,
-	where VARCHAR(255),
+	tirpDate date,
+	location VARCHAR(255),
 	pries int,
-	PRIMARY KEY(trip, day)
+	PRIMARY KEY(trip, tirpDate)
 );
 
 Create TABLE Booking(
 	ID int,
 	trip VARCHAR(255),
-	day date,
-	PRIMARY KEY(ID, trip, day),
+	tirpDate date,
+	PRIMARY KEY(ID, trip, tirpDate),
 	FOREIGN KEY(ID) REFERENCES User(ID),
-	FOREIGN KEY(trip, day) REFERENCES Trip(tirp, day)
+	FOREIGN KEY(trip, tirpDate) REFERENCES Trip(tirp, tirpDate)
 );
 	
 	
