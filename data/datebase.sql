@@ -1,9 +1,12 @@
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Trip;
+DROP TABLE IF EXISTS Booking;
+
 Create TABLE Users(
-	ID int PRIMARY KEY,
+	ID VARCHAR(255) PRIMARY KEY,
 	FName VARCHAR(255),
 	LName VARCHAR(255),
-	Pasword VARCHAR(255),
-	Clerans int
+	Pasword VARCHAR(255)
 );
 
 Create TABLE Trip(
@@ -15,7 +18,7 @@ Create TABLE Trip(
 );
 
 Create TABLE Booking(
-	ID int,
+	ID VARCHAR(255),
 	trip VARCHAR(255),
 	tirpDate date,
 	PRIMARY KEY(ID, trip, tirpDate),

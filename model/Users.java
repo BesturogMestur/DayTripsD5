@@ -1,27 +1,25 @@
 public class User{
-    private long id;
-    private boolean[] clearance;
+    private Sting id;
     private char password;
-    private String fname;
+    private String fName;
     private String lName;
-    private Booking booking;
+    private Booking[] booking;
+    private int countBooking;
 
-    //will maybe to a consotur at a later time
+    public User(String id, int clearance, char password, String fName, String lName){
+	setId(id);
+	setPassword(password);
+	setFastName(FastName);
+	setLastName(lastName);
+	getBooking(id);
+    }
 
     protected void setId(long id){
 	this.id = id;
     }
 
-    public long getId(){
+    public String getId(){
 	return id;
-    }
-
-    protected void setClarance(int i, Boolean b){
-	clearance[i]=b;
-    }
-
-    protected boolean[] getClaramce(){
-	return clearance;
     }
 
     private void setFName(String name){
@@ -40,21 +38,21 @@ public class User{
 	return LName;
     }
 
-    private void setBooking(Booking book ){
-	//veit ekki enþá hvening þetta á að vika
-	booking = book;
+    private void udateBooking(){
+	setBooking();
+    }	
+
+    private void setBooking(){
+	BookingController book = new BookingController();
+	this.booking = book.finedBooking(this.id);
     }
 
-    public Booking getBooking(){
-	return booking;
+    public Booking[] getBooking(){
+	return this.booking;
     }
 
-    private void setPasword(char newPw, char oldPw){
-	if(this.pasword == oldPw){
-	    this.pasword = newPw;
-	    println("pasword updated");
-	}
-	else println("not the same password, pasword not updated");
+    private void setPasword(char Pw){
+        this.password = pw;
     }
 
     package char getPasword(){
