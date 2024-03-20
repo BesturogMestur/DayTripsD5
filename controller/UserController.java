@@ -1,10 +1,16 @@
 class UserController{
-    //Have to fix this so we can use the Database to update this.
-    private void updatePasword(char newPw, char oldPw){
-	if(this.pasword == oldPw){
-	    this.pasword = newPw;
-	    println("pasword updated");
+    private User user;
+    private boolean log = false;
+
+    public void logIn(Sting id, char password){
+	user = new User(id, password);
+	if(user =! null){
+	    log = true;
 	}
-	else println("not the same password, pasword not updated");
-    
+    }
+
+    public void logOut(){
+	user = null;
+	log = false;
+    }
 }

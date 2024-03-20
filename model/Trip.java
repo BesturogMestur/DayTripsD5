@@ -1,10 +1,18 @@
 public class Trip{
-    //constructor will be made later
-
     private String type;
     private String location;
     private char date;
-    private Pay price;
+    private Pay price; //will mostliky remove
+
+    public Trip(String type, String location, char date, Pay price, boolean nw){
+	getTrip(type, location);
+    }
+
+    public Trip(String type, String location, char date, Pay price){
+	addTrip(type, location, date, price);
+    }
+
+    //þarf að gera addTrip / getTrip
 
     protected void SetType(String name){
 	type = name;
