@@ -1,12 +1,8 @@
 class UserController{
-    private User user;
+    private UserInt user;
 
-    public User logIn(Sting id, char password){
-	user = new User(id, password);
-	if(user =! null){
-	    log = true;
-	}
-	return this.user;
+    public void logIn(Sting id, char password){
+	findUser(id, password);
     }
 
     public void logOut(){
@@ -14,18 +10,14 @@ class UserController{
     }
 
     public void setUp(Sring id, char password, String fName, String lName){
-	this.user = new user(id, password, fName, lName);
-	if (this.user != null){
-	    this.log = true;
-	}
+	this.user.add(id, password, fName, lName);
     }
 
     public void delUser(char password){
-	if(log){
+	if(this.user != null){
 	    if(this.user.isPwValed(password)){
 		this.user.delUser();
 		this.user = null;
-		this.log = false;
 	    }
 	}
     }
@@ -36,8 +28,8 @@ class UserController{
 
 	tC.findTrip(String type, char date);
 
-	Trip trip = tc.getTrip;
-	String Id = this.user.getId;
+	TripInt trip = tc.getTrip;
+	StringInt Id = this.user.getId();
 	bc.addBooking(id, trip);
     }
 	
