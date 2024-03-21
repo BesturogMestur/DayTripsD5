@@ -4,11 +4,11 @@ public class Trip{
     private char date;
     private Pay price; //will mostliky remove
 
-    public Trip(String type, String location, char date, Pay price, boolean nw){
+    public Trip(String type, String location, char date, Pay price){
 	getTrip(type, location);
     }
 
-    public Trip(String type, String location, char date, Pay price){
+    public Trip(String type, String location){
 	addTrip(type, location, date, price);
     }
 
