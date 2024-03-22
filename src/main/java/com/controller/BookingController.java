@@ -20,7 +20,7 @@ public class BookingController {
         this.book = new Booking(id, trip);
     }
 
-    public void findBooking(String id, String type, char date) {
+    public void findBooking(String id, String type, String date) {
         book.find(id, type, date);
     }
 

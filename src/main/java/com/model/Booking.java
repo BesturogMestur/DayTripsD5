@@ -40,14 +40,17 @@ public class Booking {
     }
 
     public void add() {
-        // Implement add method
+        // Test print fyir test case, a eftir ad implementa
+        System.out.println("Booking Added");
     }
 
     public void del() {
-        // Implement del method
+        // Test print fyir test case, a eftir ad implementa
+        System.out.println("Booking Deleted");
     }
 
-    public void find(String id, String type, char date) {
-        // Implement find method
+    public void find(String id, String type, String date) {
+        // Test print fyir test case, a eftir ad implementa
+        System.out.println("Finding booking with id " + id + "type " + type + "and date " + date);
     }
 }

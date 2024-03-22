@@ -4,13 +4,13 @@ import com.model.Pay;
 import com.model.Trip;
 
 public class TripController{
-    private Trip trip;
+    Trip trip;
 
     public void makeTrip(String type, String location, String date, Pay price) throws Exception {
 	this.trip.add(type, location, date, price);
     }
 
-    public void findTrip(String type, char date) throws Exception {
+    public void findTrip(String type, String date) throws Exception {
 	this.trip.find(type, date);
     }
 

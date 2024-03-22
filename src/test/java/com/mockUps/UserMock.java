@@ -2,7 +2,6 @@ package com.mockUps;
 
 import com.data.UserTable;
 import com.model.Booking;
-import com.model.User;
 import com.model.UserInt;
 
 public class UserMock implements UserInt {
@@ -56,12 +55,12 @@ public class UserMock implements UserInt {
 	}
 
 	@Override
-	public void add(String id, char password, String fName, String lName) {
+	public void add(String id, String password, String fName, String lName) {
 
 	}
 
 	@Override
-	public boolean isPwValed(char password) {
+	public boolean isPwValed(String password) {
 		return false;
 	}
 

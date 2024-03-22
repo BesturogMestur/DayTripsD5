@@ -4,24 +4,24 @@ import com.model.User;
 import com.model.UserInt;
 
 public class UserController{
-    private UserInt user;
+    UserInt user;
 
-    public void logIn(String id, char password){
+    public void logIn(String id, String password){
 	findUser(id, password);
     }
 
-    private void findUser(String id, char password) {
+    private void findUser(String id, String password) {
     }
 
     public void logOut(){
 	user = null;
     }
 
-    public void setUp(String id, char password, String fName, String lName){
+    public void setUp(String id, String password, String fName, String lName){
 	this.user.add(id, password, fName, lName);
     }
 
-    public void delUser(char password){
+    public void delUser(String password){
 	if(this.user != null){
 	    if(this.user.isPwValed(password)){
 		this.user.delUser();

@@ -1,24 +1,51 @@
 package com.controller;
 
 import com.model.UserInt;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 class UserControllerTest {
 
-    private UserController controller = new UserController();
-    private UserInt mockUser = mock(UserInt.class);
+    private UserController userController;
+    private UserInt mockUser;
+
+    @BeforeEach
+    void setUp() {
+        userController = new UserController();
+
+        mockUser = mock(UserInt.class);
+
+        userController.user = mockUser;
+    }
+
+    @Test
+    void testLogInAndOut() {
+        String id = "testUser";
+        String password = "pass";
+
+        userController.logOut();
+        assertNull(userController.getUser(), "User should be null after logout");
+    }
 
     @Test
     void testSetUp() {
-        controller.setUp("123", 'p', "John", "Doe");
-        verify(mockUser, times(1)).add("123", 'p', "John", "Doe");
+        String id = "testUser";
+        String password = "pass";
+        String fName = "Test";
+        String lName = "User";
+
+        userController.setUp(id, password, fName, lName);
+        verify(mockUser).add(anyString(), anyString(), anyString(), anyString());
     }
 
     @Test
     void testDelUser() {
-        when(mockUser.isPwValed('p')).thenReturn(true);
-        controller.delUser('p');
-        verify(mockUser, times(1)).delUser();
+        String password = "pass";
+        when(mockUser.isPwValed(password)).thenReturn(true);
+        userController.delUser(password);
+        verify(mockUser).delUser();
+        assertNull(userController.getUser(), "User should be null after delUser() if password is validated");
     }
 }

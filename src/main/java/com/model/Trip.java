@@ -54,9 +54,6 @@ public class Trip{
 	return price;
     }
 
-    public void add(String type, String location, String date, Pay price) throws Exception {
-    }
-
     public LocalDate getTripDate() {
         return null;
     }
@@ -65,9 +62,16 @@ public class Trip{
         return null;
     }
 
-    public void find(String type, char date) throws Exception {
+    public void find(String type, String date) throws Exception {
     }
 
-    public void del() throws Exception {
+    public void del(){
+        // Test print fyir test case, a eftir ad implementa
+        System.out.println("Trip deleted");
+    }
+
+    public void add(String type, String location, String date, Pay price){
+        // Test print fyir test case, a eftir ad implementa
+        System.out.println("Trip added");
     }
 }
