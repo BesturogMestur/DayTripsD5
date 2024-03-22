@@ -1,3 +1,5 @@
+package com.mockUps;
+
 class Usermock implements UserInt{
     private String id;
     private char password;
@@ -41,6 +43,4 @@ class Usermock implements UserInt{
 	this.table.add(id, password, fName, lName);
 	this.table.disConn();
     }
-	
-	
 }
