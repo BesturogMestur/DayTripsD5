@@ -1,12 +1,17 @@
-public class PayEuro extends Pay{
+package com.model;
+
+public class PayEuro extends Pay {
     private double value;
 
-    //Constructor will be made at a later dayed
-
-    public void setValue(Double v){
-	value = v;
+    public PayEuro() {
+        super();
     }
 
-    public double getValie(){
-	return value;
+    public void setValue(Double v) {
+        value = v;
     }
+
+    public double getValue() {
+        return value;
+    }
+}

@@ -1,5 +1,9 @@
-interface Booking{
-    public void add();
-    public void del();
-    public void find(String id, String type, char date);
+package com.model;
+
+public interface BookingInt {
+    void add() throws Exception;
+
+    void del() throws Exception;
+
+    void find(String id, String type, char date);
 }

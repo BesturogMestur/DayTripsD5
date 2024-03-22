@@ -1,12 +1,18 @@
-public class PayGBT extends Pay{
+package com.model;
+
+public class PayGBP extends Pay {
     private double value;
 
-    //Constructor will be made at a later dayed
-
-    public void setValue(Double v){
-	value = v;
+    public PayGBP() {
+        super();
     }
 
-    public double getValie(){
-	return value;
+    public void setValue(Double v) {
+        value = v;
     }
+
+    public double getValue() {
+        return value;
+    }
+}
+

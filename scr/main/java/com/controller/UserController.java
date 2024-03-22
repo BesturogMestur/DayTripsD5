@@ -1,15 +1,23 @@
+package com.controller;
+
+import com.model.User;
+import com.model.UserInt;
+
 class UserController{
     private UserInt user;
 
-    public void logIn(Sting id, char password){
+    public void logIn(String id, char password){
 	findUser(id, password);
+    }
+
+    private void findUser(String id, char password) {
     }
 
     public void logOut(){
 	user = null;
     }
 
-    public void setUp(Sring id, char password, String fName, String lName){
+    public void setUp(String id, char password, String fName, String lName){
 	this.user.add(id, password, fName, lName);
     }
 
@@ -21,21 +29,10 @@ class UserController{
 	    }
 	}
     }
-
-    public void addBooking(String type, char date){
-	BookingController bC = new BookingController;
-	TripController tC = new TripController;
-
-	tC.findTrip(String type, char date);
-
-	TripInt trip = tc.getTrip;
-	StringInt Id = this.user.getId();
-	bc.addBooking(id, trip);
-    }
 	
 
     public User getUser(){
-	return this.user;
+	    return (User) this.user;
     }
 
     

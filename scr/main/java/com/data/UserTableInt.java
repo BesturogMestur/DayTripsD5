@@ -1,2 +1,6 @@
-package com.data;public class UserTableInt {
+package com.data;
+
+public class UserTableInt {
+
+
 }

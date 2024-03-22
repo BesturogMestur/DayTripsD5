@@ -1,12 +1,19 @@
-public class PayUSD extends Pay{
+package com.model;
+
+public class PayUSD extends Pay {
     private double value;
 
-    //Constructor will be made at a later dayed
-
-    public void setValue(Double v){
-	value = v;
+    public PayUSD() {
+        super();
     }
 
-    public double getValie(){
-	return value;
+    public void setValue(Double v) {
+        value = v;
     }
+
+    public double getValue() {
+        return value;
+    }
+}
+
+

@@ -1,9 +1,10 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package java.com.controller;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
-class BookingControllerTest{
+public class BookingControllerTest{
 
     @BeforeEach
     void setUp(){
