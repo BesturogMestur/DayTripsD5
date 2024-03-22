@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.controller.TripControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.095 s <<< FAILURE! - in com.controller.TripControllerTest
+testMakeTrip  Time elapsed: 0.089 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.model.Trip.add(String, String, String, com.model.Pay)" because "this.trip" is null
+	at com.controller.TripControllerTest.testMakeTrip(TripControllerTest.java:17)
+
+testDelTrip  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.model.Trip.del()" because "this.trip" is null
+	at com.controller.TripControllerTest.testDelTrip(TripControllerTest.java:23)
+
